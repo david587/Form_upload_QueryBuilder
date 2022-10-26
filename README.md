@@ -1,10 +1,16 @@
 ## Start
 composer create-project laravel/laravel example-app
+<br>
 cd example_app
+<br>
 php artisan serve
+<br>
 php artisan make:migration create_example_app
+<br>
 Php artisan migrate
+<br>
 php artisan make:model Example
+<br>
 Php artisan migrate:fresh
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
