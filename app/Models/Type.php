@@ -11,9 +11,8 @@ class Type extends Model
     use HasFactory;
     
     
-    protected $fillable =["type","part","price","type_id"];
     public function part(){
-        return $this->belongsTo(Part::class,"type_id");
+        return $this->belongsTo(Part::class);
     }
 }
 

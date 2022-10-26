@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string("part");
             $table->integer("price");
-            $table->foreignId("type_id")->constrained()->onDelete("cascade");
+            // $table->unsignedBigInteger('type_id');
+            $table->foreignId("type_id")->nullable()->constrained()->onDelete("cascade");
+            // $table->foreign('type_id')->references('id')->on('types');
             $table->timestamps();
         });
     }

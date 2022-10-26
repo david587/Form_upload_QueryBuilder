@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use auth;
 use App\Models\Part;
 use App\Models\Type;
 use Illuminate\Http\Request;
@@ -19,11 +20,12 @@ class PcController extends Controller
             "part"=>"required",
             "price"=>"required"
         ]);
+        
         Part::create($formFields);
         return redirect("/");
     }
 
-    
+
     public function store_type(Request $request){
         $formFields = $request->validate([
             "type"=>"required"
@@ -31,6 +33,6 @@ class PcController extends Controller
         Type::create($formFields);
         
     
-        return redirect("/");
+        return redirect("/")->with("message","Uploaded succesfully!");;
     }
 }

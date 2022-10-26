@@ -18,8 +18,9 @@ use App\Http\Controllers\PcController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::post("/send",[PcController::class,"store_part"]);
+Route::post("/send",[PcController::class,"store_type"]);
 Route::get("/form", [PcController::class,"show_form"]);
 
-Route::post("/send",[PcController::class,"store_type"]);
-Route::post("/send",[PcController::class,"store_part"]);
+
+

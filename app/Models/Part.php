@@ -10,8 +10,8 @@ use App\Models\Type;
 class Part extends Model
 {
     use HasFactory;
-    
+   
     public function type(){
-        return $this->hasMany(Type::class,"id");
+        return $this->hasMany(Type::class);
     }
 }
