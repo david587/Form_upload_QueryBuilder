@@ -11,7 +11,7 @@ class Part extends Model
 {
     use HasFactory;
    
-    public function type(){
-        return $this->hasMany(Type::class);
-    }
+    // public function type(){
+    //     return $this->hasMany(Type::class,"type_id");
+    // }
 }

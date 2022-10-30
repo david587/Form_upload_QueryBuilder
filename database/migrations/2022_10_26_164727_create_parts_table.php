@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('parts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("type_id");
             $table->string("part");
             $table->integer("price");
+            //->constrained()->onDelete("cascade"); 
             // $table->unsignedBigInteger('type_id');
-            $table->foreignId("type_id")->nullable()->constrained()->onDelete("cascade");
             // $table->foreign('type_id')->references('id')->on('types');
             $table->timestamps();
         });
